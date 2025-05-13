@@ -18,7 +18,7 @@
       --background-color: #ffffff;
       --text-color: #333333;
       --sidebar-width: 250px;
-      --min-amount: 3500;            /* Minimum deposit/withdrawal */
+      --min-amount: 2500;            /* Minimum deposit/withdrawal */
       --transition-speed: 0.3s;
     }
     /* Dark Mode Variables */
@@ -288,61 +288,40 @@
   </style>
 </head>
 <body>
-
   <!-- Landing Section -->
   <div id="landingSection">
     <h1>InvestPro</h1>
     <p>Invest in tailored plans and grow your wealth with daily withdrawals. Experience a professional platform built for performance.</p>
-<p>At invest pro, we're revolutionizing the way people invest and grow their wealth. Our innovative investment platform provides a secure, user-friendly, and lucrative way for individuals to invest and earn daily interest.</p>
-
-<h2>Our Mission</h2>
-
-<p>Our mission is to empower individuals to take control of their financial futures by providing a reliable and profitable investment platform. We believe that everyone deserves access to investment opportunities that can help them achieve their financial goals.</p>
-
-<h2>How It Works</h2>
-
-<p>Our platform is designed to be simple, intuitive, and accessible to investors of all levels. Here's how it works:</p>
-
-<ol>
-<li><strong>Invest</strong>: Users can invest in a variety of investment plans, each with its own interest rate and term.</li>
-<li><strong>Earn</strong>: Users earn daily interest on their investments, which can be withdrawn or reinvested.</li>
-<li><strong>Track</strong>: Users can track their investments and earnings in real-time through our user-friendly dashboard.</li>
-</ol>
-
-<h2>Benefits</h2>
-
-<p>Our platform offers numerous benefits, including:</p>
-
-<ul>
-<li><strong>High-Yield Returns</strong>: Earn daily interest on your investments and grow your wealth over time.</li>
-<li><strong>Flexibility</strong>: Choose from a variety of investment plans to suit your financial goals and risk tolerance.</li>
-<li><strong>Security</strong>: Our platform is secure and reliable, with robust security measures in place to protect your investments.</li>
-<li><strong>Convenience</strong>: Invest and manage your investments online, 24/7.</li>
-</ul>
-
-<h2>Why Choose invest pro?</h2>
-
-<p>At invest pro, we're committed to providing a superior investment experience. Here's why investors choose us:</p>
-
-<ul>
-<li><strong>Experienced Team</strong>: Our team has extensive experience in finance and investment.</li>
-<li><strong>Proven Track Record</strong>: We've consistently delivered high-yield returns to our investors.</li>
-<li><strong>Transparent</strong>: We're transparent about our investment strategies and fees.</li>
-</ul>
-
-
-
-<p>Ready to start investing and earning daily interest? Sign up for [Platform Name] today and take the first step towards achieving your financial goals.</p>
-
-
+    <p>At invest pro, we're revolutionizing the way people invest and grow their wealth. Our innovative investment platform provides a secure, user-friendly, and lucrative way for individuals to invest and earn daily interest.</p>
+    <h2>Our Mission</h2>
+    <p>Our mission is to empower individuals to take control of their financial futures by providing a reliable and profitable investment platform. We believe that everyone deserves access to investment opportunities that can help them achieve their financial goals.</p>
+    <h2>How It Works</h2>
+    <p>Our platform is designed to be simple, intuitive, and accessible to investors of all levels. Here's how it works:</p>
+    <ol>
+      <li><strong>Invest</strong>: Users can invest in a variety of investment plans, each with its own interest rate and term.</li>
+      <li><strong>Earn</strong>: Users earn daily interest on their investments, which can be withdrawn or reinvested.</li>
+      <li><strong>Track</strong>: Users can track their investments and earnings in real-time through our user-friendly dashboard.</li>
+    </ol>
+    <h2>Benefits</h2>
+    <p>Our platform offers numerous benefits, including:</p>
+    <ul>
+      <li><strong>High-Yield Returns</strong>: Earn daily interest on your investments and grow your wealth over time.</li>
+      <li><strong>Flexibility</strong>: Choose from a variety of investment plans to suit your financial goals and risk tolerance.</li>
+      <li><strong>Security</strong>: Our platform is secure and reliable, with robust security measures in place to protect your investments.</li>
+      <li><strong>Convenience</strong>: Invest and manage your investments online, 24/7.</li>
+    </ul>
+    <h2>Why Choose invest pro?</h2>
+    <p>At invest pro, we're committed to providing a superior investment experience. Here's why investors choose us:</p>
+    <ul>
+      <li><strong>Experienced Team</strong>: Our team has extensive experience in finance and investment.</li>
+      <li><strong>Proven Track Record</strong>: We've consistently delivered high-yield returns to our investors.</li>
+      <li><strong>Transparent</strong>: We're transparent about our investment strategies and fees.</li>
+    </ul>
+    <p>Ready to start investing and earning daily interest? Sign up for invest pro today and take the first step towards achieving your financial goals.</p>
     <button class="cta-button" id="getStartedBtn">Get Started</button>
-
-<p>Ready to start investing and earning daily interest? Sign up for invest pro today and take the first step towards achieving your financial goals.</p>
-    <button class="cta-button" ><a href ="i4340269@gmail.com">contact us</button>
-
-
+    <p>Ready to start investing and earning daily interest? Sign up for invest pro today and take the first step towards achieving your financial goals.</p>
+    <button class="cta-button"><a href="mailto:i4340269@gmail.com">Contact Us</a></button>
   </div>
-
   <!-- Auth Section -->
   <div id="authSection">
     <div class="auth-container" id="loginContainer">
@@ -367,20 +346,6 @@
       <div class="toggle-link">Already have an account? <a id="showLogin">Login</a></div>
     </div>
   </div>
-
-  <!-- OTP Modal (Simulated Email OTP) -->
-  <div class="modal" id="otpModal">
-    <div class="modal-content">
-      <h3>Email OTP Verification</h3>
-      <p>An OTP has been sent to your email. (For demo, enter 123456.)</p>
-      <input type="text" id="otpInput" placeholder="Enter OTP">
-      <div>
-        <button id="otpSubmitBtn">Verify</button>
-        <button id="otpCancelBtn">Cancel</button>
-      </div>
-    </div>
-  </div>
-
   <!-- Dashboard Section -->
   <div id="dashboardSection">
     <!-- Sidebar Navigation -->
@@ -394,6 +359,7 @@
         <li onclick="showDashboardSection('news')">News</li>
         <li onclick="showDashboardSection('profile')">Profile</li>
         <li onclick="showDashboardSection('referral')">Referral</li>
+        <li id="adminPanelBtn" style="display:none" onclick="showDashboardSection('adminPanel')">Admin Panel</li>
         <li onclick="logout()">Logout</li>
       </ul>
     </div>
@@ -428,6 +394,8 @@
           <p>Available Balance</p>
         </div>
         <div class="cta-buttons">
+          <button id="depositBtn">Deposit (Flutterwave)</button>
+          <button id="moniepointDepositBtn">Deposit (Moniepoint)</button>
           <button id="ufitPayDepositBtn">Deposit (Platform Bank)</button>
           <button id="peerDepositBtn">P2P Deposit</button>
           <button id="transferBtn">Transfer Funds</button>
@@ -468,12 +436,10 @@
           <!-- Investment plan cards will be generated here -->
         </div>
       </div>
-      <!-- New Analytics Section -->
       <div id="analytics" class="section">
         <h1>Analytics</h1>
         <canvas id="investmentChart" width="400" height="200"></canvas>
       </div>
-      <!-- New Financial News Section -->
       <div id="news" class="section">
         <h1>Financial News</h1>
         <div id="newsContent">
@@ -508,15 +474,27 @@
           <p>No referrals yet.</p>
         </div>
       </div>
+      <div id="adminPanel" class="section">
+        <h1>Admin Panel</h1>
+        <h3>Pending Deposits</h3>
+        <table class="transaction-table">
+          <thead><tr><th>Date</th><th>User</th><th>Amount (₦)</th><th>Reference</th><th>Actions</th></tr></thead>
+          <tbody id="pendingDepositsTableBody"></tbody>
+        </table>
+        <h3>Pending Withdrawals</h3>
+        <table class="transaction-table">
+          <thead><tr><th>Date</th><th>User</th><th>Amount (₦)</th><th>Actions</th></tr></thead>
+          <tbody id="pendingWithdrawalsTableBody"></tbody>
+        </table>
+      </div>
     </div>
   </div>
-
   <!-- Peer-to-Peer Deposit Modal -->
   <div class="modal" id="peerDepositModal">
     <div class="modal-content">
       <h3>Peer-to-Peer Deposit</h3>
-      <p>Please transfer an amount (minimum ₦3,500) from any bank to our account:</p>
-      <p><strong>Bank:</strong> opay Bank,<br><strong>Account number:</strong> 9135476650,<br><strong>Account Name:</strong> linda james.</p>
+      <p>Please transfer an amount (minimum ₦2,500) from any bank to our account:</p>
+      <p><strong>Bank:</strong> XYZ Bank,<br><strong>Account Number:</strong> 1234567890,<br><strong>Account Name:</strong> InvestPro Ltd.</p>
       <input type="number" id="peerDepositAmountInput" placeholder="Enter amount in ₦">
       <input type="text" id="peerDepositRefInput" placeholder="Enter bank transfer reference">
       <div>
@@ -526,7 +504,6 @@
       <p style="font-size: 0.9rem;">* Your deposit will be reviewed and approved manually.</p>
     </div>
   </div>
-
   <!-- UfitPay Deposit Modal -->
   <div class="modal" id="ufitPayDepositModal">
     <div class="modal-content">
@@ -540,7 +517,6 @@
       <p style="font-size: 0.9rem;">* Funds will appear as pending until confirmed.</p>
     </div>
   </div>
-
   <!-- Transfer Funds Modal -->
   <div class="modal" id="transferModal">
     <div class="modal-content">
@@ -553,7 +529,6 @@
       </div>
     </div>
   </div>
-
   <!-- Link Bank Account Modal -->
   <div class="link-bank-modal" id="linkBankModal">
     <div class="modal-content">
@@ -567,7 +542,6 @@
       </div>
     </div>
   </div>
-
   <!-- Withdraw Modal -->
   <div class="modal" id="withdrawModal">
     <div class="modal-content">
@@ -577,13 +551,11 @@
         <button id="withdrawSubmitBtn">Submit</button>
         <button id="withdrawCancelBtn">Cancel</button>
       </div>
-      <p style="font-size: 0.9rem;">* Minimum withdrawal is ₦3,500.</p>
+      <p style="font-size: 0.9rem;">* Minimum withdrawal is ₦2,500.</p>
     </div>
   </div>
-
   <!-- Notification -->
   <div id="notification"></div>
-
   <!-- Firebase SDKs -->
   <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
@@ -593,17 +565,17 @@
       // Initialize Firebase – replace with your actual configuration values
       const firebaseConfig = {
         apiKey: "AIzaSyBpqEgGiRoZO_Hb4IXt_YuTV9WQLmwHBZM",
-        authDomain: "your-project-id.firebaseapp.com",
-        projectId: "your-project-id",
-        storageBucket: "your-project-id.appspot.com",
-        messagingSenderId: "your-messaging-sender-id",
-        appId: "your-app-id"
+        authDomain: "investoship.firebaseapp.com",
+        projectId: "investoship",
+        storageBucket: "investoship.firebasestorage.app",
+        messagingSenderId: "264495950069",
+        appId: "1:264495950069:web:dbda7567da9cb3f0b4bdbc",
+        measurementId: "G-K57NCKQ51D"
       };
       firebase.initializeApp(firebaseConfig);
       const auth = firebase.auth();
       const db = firebase.firestore();
-      const MIN_AMOUNT = 3500;
-
+      const MIN_AMOUNT = 2500;
       /* Utility Function */
       function showNotification(message, type) {
         const note = document.getElementById("notification");
@@ -612,7 +584,6 @@
         note.style.display = "block";
         setTimeout(() => { note.style.display = "none"; }, 3000);
       }
-
       /* Landing & Auth Events */
       document.getElementById("getStartedBtn").addEventListener("click", () => {
         document.getElementById("landingSection").style.display = "none";
@@ -637,16 +608,19 @@
           }
         }
       });
-
       /* Authentication */
       document.getElementById("loginButton").addEventListener("click", async () => {
         const email = document.getElementById("loginEmail").value;
         const password = document.getElementById("loginPassword").value;
         try {
-          await auth.signInWithEmailAndPassword(email, password);
-          // Simulate OTP send (in production, integrate proper OTP sending)
-          sessionStorage.setItem("otp", "123456");
-          showOTPModal();
+          const userCredential = await auth.signInWithEmailAndPassword(email, password);
+          const user = userCredential.user;
+          if (!user.emailVerified) {
+            showNotification("Please verify your email before logging in.");
+            await auth.signOut();
+            return;
+          }
+          showDashboard();
         } catch (error) {
           showNotification(error.message, "error");
         }
@@ -664,40 +638,25 @@
           const userCredential = await auth.createUserWithEmailAndPassword(email, password);
           const user = userCredential.user;
           await user.updateProfile({ displayName: name });
-          // Optionally store referrer if available via referral link
-          await db.collection("users").doc(user.uid).set({
-            name,
-            email,
-            balance: 0,
-            dailyEarnings: 0,
-            referralBonus: 0,
-            referralCount: 0
-          });
-          sessionStorage.setItem("otp", "123456");
-          showOTPModal();
+          // Store user info
+          const referrerId = new URLSearchParams(window.location.search).get('ref');
+          const userData = { name, email, balance: 0, dailyEarnings: 0, referralBonus: 0, referralCount: 0 };
+          if (referrerId) {
+            userData.referrer = referrerId;
+          }
+          await db.collection("users").doc(user.uid).set(userData);
+          // Generate and save referral link once
+          await db.collection("users").doc(user.uid).update({ referralLink: window.location.origin + "/?ref=" + user.uid });
+          if (referrerId) {
+            await db.collection("users").doc(referrerId).update({ referralCount: firebase.firestore.FieldValue.increment(1) });
+          }
+          await user.sendEmailVerification();
+          showNotification("Verification email sent. Please check your inbox.", "info");
+          await auth.signOut();
         } catch (error) {
           showNotification(error.message, "error");
         }
       });
-
-      /* OTP Modal */
-      function showOTPModal() {
-        document.getElementById("otpModal").style.display = "flex";
-      }
-      document.getElementById("otpSubmitBtn").addEventListener("click", () => {
-        const otp = document.getElementById("otpInput").value.trim();
-        if (otp === sessionStorage.getItem("otp")) {
-          document.getElementById("otpModal").style.display = "none";
-          showDashboard();
-        } else {
-          alert("Invalid OTP. Please try again.");
-        }
-      });
-      document.getElementById("otpCancelBtn").addEventListener("click", () => {
-        auth.signOut();
-        document.getElementById("otpModal").style.display = "none";
-      });
-
       /* Dashboard Section Navigation */
       window.showDashboardSection = function(section) {
         const sections = document.querySelectorAll('#mainContent .section');
@@ -705,14 +664,15 @@
         const targetSection = document.getElementById(section);
         if (targetSection) {
           targetSection.style.display = 'block';
-          // Animate fade-in
           setTimeout(() => { targetSection.style.opacity = 1; }, 50);
           if (section === 'analytics') {
             renderChart();
           }
+          if (section === 'adminPanel') {
+            loadAdminData();
+          }
         }
       };
-
       /* Dashboard Functions */
       async function loadOverview() {
         const user = auth.currentUser;
@@ -725,6 +685,10 @@
             document.getElementById("balanceOverview").innerText = `₦${data.balance.toFixed(2)}`;
             document.getElementById("dailyEarningsOverview").innerText = `₦${data.dailyEarnings.toFixed(2)}`;
             document.getElementById("referralBonusOverview").innerText = `₦${data.referralBonus.toFixed(2)}`;
+            // Show admin panel if user is admin
+            if (data.isAdmin) {
+              document.getElementById("adminPanelBtn").style.display = "block";
+            }
           }
         } catch (error) {
           showNotification();
@@ -767,18 +731,17 @@
             showNotification();
           });
       }
-
       /* Investment Plans */
       function generatePlans() {
         const plans = [];
-        for (let price = 3500; price <= 500000; price += 3500) {
+        for (let price = 2500; price <= 500000; price += 1500) {
           let dailyReturn, duration;
-          if (price <= 10000) { dailyReturn = 10; duration = 30; }
-          else if (price <= 25000) { dailyReturn = 14; duration = 31; }
-          else if (price <= 50000) { dailyReturn = 18; duration = 31; }
-          else if (price <= 100000) { dailyReturn = 24; duration = 35; }
-          else if (price <= 200000) { dailyReturn = 24; duration = 35; }
-          else { dailyReturn = 30; duration = 40; }
+          if (price <= 10000) { dailyReturn = 5; duration = 30; }
+          else if (price <= 25000) { dailyReturn = 7; duration = 35; }
+          else if (price <= 50000) { dailyReturn = 9; duration = 40; }
+          else if (price <= 100000) { dailyReturn = 12; duration = 45; }
+          else if (price <= 200000) { dailyReturn = 14; duration = 50; }
+          else { dailyReturn = 15; duration = 60; }
           const dailyInterest = price * (dailyReturn / 100);
           const totalProfit = dailyInterest * duration;
           plans.push({ name: `Plan for ₦${price.toLocaleString()}`, price, dailyInterest, duration, totalProfit });
@@ -798,28 +761,25 @@
             <p>Daily Interest: ₦${plan.dailyInterest.toFixed(2)}</p>
             <p>Duration: ${plan.duration} days</p>
             <p>Total Profit: ₦${plan.totalProfit.toFixed(2)}</p>
-            <button class="invest-btn" onclick="openPeerDepositForPlan(${plan.price})">
-              Invest Now
-            </button>
+            <button class="invest-btn" onclick="openPeerDepositForPlan(${plan.price})">Invest Now</button>
           `;
           grid.appendChild(card);
         });
       }
       window.openPeerDepositForPlan = function(price) {
         if (price < MIN_AMOUNT) {
-          alert("Minimum investment is ₦3,500.");
+          alert("Minimum investment is ₦2,500.");
           return;
         }
         document.getElementById("peerDepositAmountInput").value = price;
         document.getElementById("peerDepositModal").style.display = "flex";
       };
-
       /* Peer-to-Peer Deposit Modal Actions */
       document.getElementById("peerDepositSubmitBtn").addEventListener("click", async () => {
         const amount = parseFloat(document.getElementById("peerDepositAmountInput").value);
         const reference = document.getElementById("peerDepositRefInput").value.trim();
         if (isNaN(amount) || amount < MIN_AMOUNT) {
-          alert("Please enter a valid amount (minimum ₦3,500).");
+          alert("Please enter a valid amount (minimum ₦2,500).");
           return;
         }
         if (!reference) {
@@ -837,10 +797,15 @@
             timestamp: firebase.firestore.Timestamp.now()
           });
           showNotification(`P2P deposit of ₦${amount} submitted and pending approval.`, "info");
-          // Clear inputs and close the modal
           document.getElementById("peerDepositAmountInput").value = "";
           document.getElementById("peerDepositRefInput").value = "";
           document.getElementById("peerDepositModal").style.display = "none";
+          // Apply referral bonus if first deposit
+          const userDoc = await db.collection("users").doc(user.uid).get();
+          if (userDoc.exists && userDoc.data().referrer) {
+            const bonus = amount * 0.10;
+            await db.collection("users").doc(userDoc.data().referrer).update({ referralBonus: firebase.firestore.FieldValue.increment(bonus) });
+          }
         } catch (error) {
           showNotification();
         }
@@ -850,7 +815,6 @@
         document.getElementById("peerDepositRefInput").value = "";
         document.getElementById("peerDepositModal").style.display = "none";
       });
-
       /* UfitPay Deposit Modal Actions */
       document.getElementById("ufitPayDepositBtn").addEventListener("click", () => {
         document.getElementById("ufitPayDepositModal").style.display = "flex";
@@ -862,7 +826,7 @@
         const amount = parseFloat(document.getElementById("ufitPayDepositAmountInput").value);
         const reference = document.getElementById("ufitPayDepositRefInput").value.trim();
         if (isNaN(amount) || amount < MIN_AMOUNT) {
-          alert("Please enter a valid deposit amount (minimum ₦3,500).");
+          alert("Please enter a valid deposit amount (minimum ₦2,500).");
           return;
         }
         if (!reference) {
@@ -909,6 +873,12 @@
               await db.collection("wallets").doc(user.uid).set({
                 balance: firebase.firestore.FieldValue.increment(amount)
               }, { merge: true });
+              // Apply referral bonus if first deposit
+              const userDoc = await db.collection("users").doc(user.uid).get();
+              if (userDoc.exists && userDoc.data().referrer) {
+                const bonus = amount * 0.10;
+                await db.collection("users").doc(userDoc.data().referrer).update({ referralBonus: firebase.firestore.FieldValue.increment(bonus) });
+              }
             }
             showNotification(`Deposit of ₦${amount} recorded as ${txnStatus}`, "success");
           } else {
@@ -918,7 +888,6 @@
           showNotification();
         }
       }
-
       /* Transfer Funds Modal Actions */
       document.getElementById("transferBtn").addEventListener("click", () => {
         document.getElementById("transferModal").style.display = "flex";
@@ -935,7 +904,7 @@
           return;
         }
         if (isNaN(transferAmount) || transferAmount < MIN_AMOUNT) {
-          alert("Minimum transfer amount is ₦3,500.");
+          alert("Minimum transfer amount is ₦2,500.");
           return;
         }
         const senderWalletRef = db.collection("wallets").doc(sender.uid);
@@ -986,7 +955,6 @@
           showNotification();
         }
       });
-
       /* Link Bank Account Modal Actions */
       document.getElementById("linkBankBtn").addEventListener("click", () => {
         document.getElementById("linkBankModal").style.display = "flex";
@@ -1011,7 +979,6 @@
           showNotification("Error linking bank account: " + error.message, "error");
         }
       });
-
       /* Withdraw Modal Actions */
       document.getElementById("withdrawBtn").addEventListener("click", () => {
         document.getElementById("withdrawModal").style.display = "flex";
@@ -1022,7 +989,7 @@
       document.getElementById("withdrawSubmitBtn").addEventListener("click", () => {
         const withdrawAmount = parseFloat(document.getElementById("withdrawAmountInput").value);
         if (isNaN(withdrawAmount) || withdrawAmount < MIN_AMOUNT) {
-          alert("Minimum withdrawal amount is ₦3,500.");
+          alert("Minimum withdrawal amount is ₦2,500.");
           return;
         }
         const user = auth.currentUser;
@@ -1053,14 +1020,12 @@
           }
         });
       });
-
       /* Modal Utility: Confirmation Modal */
       function openModal(message, callback) {
         if (confirm(message)) {
           callback();
         }
       }
-
       /* Referral & Profile Functions */
       window.copyReferralLink = function() {
         const input = document.getElementById("referralLink");
@@ -1077,9 +1042,12 @@
             const data = doc.data();
             document.getElementById("profileName").value = data.name;
             document.getElementById("profileEmail").value = data.email;
-            // Generate a unique referral link based on the user's UID
-            const referralLink = window.location.origin + "/?ref=" + user.uid;
+            // Use saved referral link or create if missing
+            const referralLink = data.referralLink || window.location.origin + "/?ref=" + user.uid;
             document.getElementById("referralLink").value = referralLink;
+            if (!data.referralLink) {
+              await db.collection("users").doc(user.uid).update({ referralLink });
+            }
           }
         } catch (error) {
           showNotification("Error loading profile: " + error.message, "error");
@@ -1094,40 +1062,21 @@
           await user.updateProfile({ displayName: name });
           await db.collection("users").doc(user.uid).update({ name, email });
           showNotification("Profile updated successfully!", "success");
-          // Update referral link after profile update if needed
           const referralLink = window.location.origin + "/?ref=" + user.uid;
           document.getElementById("referralLink").value = referralLink;
         } catch (error) {
           showNotification();
         }
       });
-
-      /* Referral Bonus Logic */
-      async function applyReferralBonus(userId, investmentAmount) {
-        const investmentsSnapshot = await db.collection("investments").where("userId", "==", userId).get();
-        if (investmentsSnapshot.size === 1) {
-          const userDoc = await db.collection("users").doc(userId).get();
-          if (userDoc.exists && userDoc.data().referrer) {
-            const bonus = 10* investmentAmount/100;
-            await db.collection("users").doc(userDoc.data().referrer).update({
-              referralBonus: firebase.firestore.FieldValue.increment(bonus)
-            });
-            showNotification(`Referrer bonus of ₦${bonus.toFixed(2)} awarded!`, "success");
-          }
-        }
-      }
-
       /* Analytics: Render a sample chart using Chart.js */
       let chartInstance = null;
       function renderChart() {
         const ctx = document.getElementById('investmentChart').getContext('2d');
-        // Sample data – replace with real investment data as needed
         const sampleData = {
           labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
           datasets: [{
             label: "Invested Amount (₦)",
             data: [5000, 10000, 7500, 12000, 9000, 15000],
-
             backgroundColor: "rgba(40, 167, 69, 0.5)",
             borderColor: "rgba(40, 167, 69, 1)",
             borderWidth: 1
@@ -1150,7 +1099,6 @@
           });
         }
       }
-
       /* Dark Mode Toggle */
       document.getElementById("toggleDarkMode").addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
@@ -1160,7 +1108,6 @@
       if (localStorage.getItem("theme") === "dark") {
         document.body.classList.add("dark-mode");
       }
-
       /* Sidebar Toggle */
       document.getElementById("toggleSidebarBtn").addEventListener("click", () => {
         const sidebar = document.getElementById("sidebar");
@@ -1168,7 +1115,6 @@
         sidebar.classList.toggle("collapsed");
         main.classList.toggle("collapsed");
       });
-
       /* Auth State Listener */
       auth.onAuthStateChanged(user => {
         if (user) {
@@ -1186,7 +1132,6 @@
           document.getElementById("authSection").style.display = "none";
         }
       });
-
       window.showDashboard = function() {
         document.getElementById("authSection").style.display = "none";
         document.getElementById("landingSection").style.display = "none";
@@ -1201,12 +1146,64 @@
         try {
           await auth.signOut();
           showNotification("Logged out successfully", "info");
-          setTimeout(() => { window.location.href = "auth.html"; }, 1000);
+          setTimeout(() => { location.reload(); }, 1000);
         } catch (error) {
           showNotification("Error during logout: " + error.message, "error");
         }
       };
+      // Admin functionalities
+      let adminDataLoaded = false;
+      async function loadAdminData() {
+        if (adminDataLoaded) return;
+        adminDataLoaded = true;
+        db.collection("transactions").where("status", "==", "Pending")
+          .onSnapshot(async snapshot => {
+            let depositsHtml = "";
+            let withdrawalsHtml = "";
+            for (const doc of snapshot.docs) {
+              const tx = doc.data();
+              const dateStr = tx.timestamp && tx.timestamp.toDate ? tx.timestamp.toDate().toLocaleString() : "";
+              const userSnap = await db.collection("users").doc(tx.userId).get();
+              const userName = userSnap.exists ? userSnap.data().name : tx.userId;
+              if (tx.description.includes("Deposit")) {
+                depositsHtml += `<tr><td>${dateStr}</td><td>${userName}</td><td>₦${tx.amount.toFixed(2)}</td><td>${tx.reference || ""}</td><td><button onclick="approveDeposit('${doc.id}')">Approve</button> <button onclick="rejectDeposit('${doc.id}')">Reject</button></td></tr>`;
+              } else if (tx.description === "Withdrawal") {
+                withdrawalsHtml += `<tr><td>${dateStr}</td><td>${userName}</td><td>₦${Math.abs(tx.amount).toFixed(2)}</td><td><button onclick="approveWithdrawal('${doc.id}')">Approve</button> <button onclick="rejectWithdrawal('${doc.id}')">Reject</button></td></tr>`;
+              }
+            }
+            document.getElementById("pendingDepositsTableBody").innerHTML = depositsHtml;
+            document.getElementById("pendingWithdrawalsTableBody").innerHTML = withdrawalsHtml;
+          });
+      }
+      async function approveDeposit(txId) {
+        const txDoc = await db.collection("transactions").doc(txId).get();
+        if (txDoc.exists) {
+          const { userId, amount } = txDoc.data();
+          await db.collection("wallets").doc(userId).set({ balance: firebase.firestore.FieldValue.increment(amount) }, { merge: true });
+          await db.collection("transactions").doc(txId).update({ status: "Confirmed" });
+          showNotification("Deposit approved.", "success");
+        }
+      }
+      async function rejectDeposit(txId) {
+        await db.collection("transactions").doc(txId).update({ status: "Rejected" });
+        showNotification("Deposit rejected.", "info");
+      }
+      async function approveWithdrawal(txId) {
+        await db.collection("transactions").doc(txId).update({ status: "Confirmed" });
+        showNotification("Withdrawal approved.", "success");
+      }
+      async function rejectWithdrawal(txId) {
+        const txDoc = await db.collection("transactions").doc(txId).get();
+        if (txDoc.exists) {
+          const { userId, amount } = txDoc.data();
+          await db.collection("wallets").doc(userId).set({ balance: firebase.firestore.FieldValue.increment(Math.abs(amount)) }, { merge: true });
+          await db.collection("transactions").doc(txId).update({ status: "Rejected" });
+          showNotification("Withdrawal rejected and refunded.", "info");
+        }
+      }
     })();
   </script>
 </body>
 </html>
+
+
